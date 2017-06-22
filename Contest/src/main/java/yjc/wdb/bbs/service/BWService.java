@@ -12,7 +12,7 @@ public interface BWService {
 	public int bwpage(int bw_id)  throws Exception;
 	public void regist2(IDEA i)  throws Exception;
 	public void ideaModify(IDEA i)  throws Exception;
-	public int bwread(String bwi_content)  throws Exception;
+	public int bwread(IDEA idea)  throws Exception;
 	public List<IDEA> bwlistpage(String bwp_id) throws Exception;
 	public int listpageid(Page page)  throws Exception;
 	public int count(int bw_id)  throws Exception;

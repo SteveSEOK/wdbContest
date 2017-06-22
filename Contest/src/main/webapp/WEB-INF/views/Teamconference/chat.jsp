@@ -69,7 +69,7 @@
         $(function(){
             	var clientName =  "박세환";  // $("#client_name").val();
 				if ("WebSocket" in window) {
-					websocket = new WebSocket("ws://172.20.1.150:8080/contest/echo?name=" + clientName);
+					websocket = new WebSocket("ws://172.19.2.235:8080/contest/echo?name=${sessionScope.u_id}&t_id= ${sessionScope.t_id}");
 				}
             
             //$("#conncet_server").click(function(){

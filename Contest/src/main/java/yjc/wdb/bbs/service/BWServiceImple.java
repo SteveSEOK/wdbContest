@@ -38,10 +38,10 @@ public class BWServiceImple implements BWService{
 		dao.ideaModify(i);
 	}
 	@Override
-	public int bwread(String bwi_content) throws Exception {
+	public int bwread(IDEA idea) throws Exception {
 		// TODO Auto-generated method stub
 		//System.out.println(idea_cont);
-		return dao.bwread(bwi_content);
+		return dao.bwread(idea);
 	}
 	@Override
 	public List<IDEA> bwlistpage(String bwp_id) throws Exception {

@@ -18,13 +18,15 @@ public class HandshakeInterceptorPaint implements org.springframework.web.socket
             ServletServerHttpRequest servletRequest = (ServletServerHttpRequest) request;
             
             String clientName = (String)servletRequest.getServletRequest().getParameter("name");
-            System.out.println(clientName);
+            String t_id = (String)servletRequest.getServletRequest().getParameter("t_id");
+            System.out.println(clientName+"´Ô"+t_id+"¹ø ÆÀ");
             
             HttpSession session = servletRequest.getServletRequest().getSession(true);
 //            String userName = "lee";
             if (session != null) {
 //               String clientName = (String) session.getAttribute("WEBSOCKET_USERNAME");
-                map.put("WEBSOCKET_USERNAME", clientName);
+            	map.put("WEBSOCKET_USERNAME", clientName);
+                map.put("WEBSOCKET_t_id", t_id);
             }
         }
         return true;

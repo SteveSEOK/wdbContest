@@ -20,7 +20,7 @@
 
 	<insert id="idea">
 		insert into bwidea(bwi_content,bwp_id,u_id)
-		values(#{bwi_content},#{bwp_id},1)
+		values(#{bwi_content},#{bwp_id},#{u_id})
 	</insert>
 	
 	<select id="bwread" resultType="Integer">

@@ -46,7 +46,7 @@
   	$(function(){
        	var clientName =  "박세환";  // $("#client_name").val();
 			if ("paintwebsocket" in window) {
-				paintwebsocket = new WebSocket("ws://172.20.1.150:8080/contest/paint-echo?name=" + clientName);
+				paintwebsocket = new WebSocket("ws://172.19.2.235:8080/contest/paint-echo?name=" + clientName);
 			}
 	   
 		paintwebsocket.onopen = function(evnt) {

@@ -15,7 +15,6 @@
 
 
     <!-- jQuery -->
-
     
 <%@include file="./bwnav.jsp"%>
 <%@include file="./chat.jsp"%>
@@ -266,7 +265,6 @@ var times = ${times};
 			if(bt.text() == 'Submit'){
 				bt.text("수정하기");
 				bt.prev().prev().prop('disabled', true);
-	
 				//content.prev().prop("disabled" , true);
 				//alert(btclass);
 				//content.next().css("border" , "4px solid #f00");
@@ -274,12 +272,13 @@ var times = ${times};
 				$.ajax({
 					url : "ideasub",
 					data : {bwi_content : IDEA_content,
-							bwp_id : pageread
+							bwp_id : pageread,
+							u_id : "${sessionScope.u_id}"
 					},
 					dataType: "text",
 					type : "post",
 					success: function(data){
-						//alert("저장되었습니다.");
+					//	alert("저장되었습니다.");
 					},
 					error : function(data){
 						alert("저장실패");
@@ -292,9 +291,11 @@ var times = ${times};
 				//var IDEA_content = bt.prev().prev().val();
 			      $.ajax({
 			         type:"post",
-			         url:"read",
+			         url:"bwread",
 			         dataType:"text",
-			         data : {bwi_content : IDEA_content},
+			         data : {bwi_content : IDEA_content,
+			        	 	u_id : "${sessionScope.u_id}"		        	 
+			         },
 			         success:function(result){
 			        	 idea_idid = result;
 			         }

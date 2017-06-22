@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import yjc.wdb.bbs.bean.BW;
 import yjc.wdb.bbs.bean.IDEA;
 import yjc.wdb.bbs.bean.Page;
@@ -26,8 +28,9 @@ public class BWController {
 	private BWService service;
 		
 	@RequestMapping(value="bwlist",method=RequestMethod.GET)
-	public String getbwlistForm(String t_id, Model model)throws Exception{
+	public String getbwlistForm(String t_id, String u_id,Model model,HttpSession session)throws Exception{
 		List<BW> list = service.bwlist(t_id);
+		session.setAttribute("t_id", t_id);
 		model.addAttribute("list",list);
 		return "Teamconference/bwlist";
 		//���Ͻ� �ڵ������� forward��
@@ -102,9 +105,9 @@ public class BWController {
 	}
 	@RequestMapping(value="bwread", method=RequestMethod.POST)
 	@ResponseBody
-	public ResponseEntity<Integer> bwread(String bwi_content, RedirectAttributes rttr) throws Exception{
+	public ResponseEntity<Integer> bwread(IDEA idea, RedirectAttributes rttr) throws Exception{
 		//System.out.println(IDEA_content);
-		int idea_result = service.bwread(bwi_content);
+		int idea_result = service.bwread(idea);
 		return new ResponseEntity<>(idea_result,HttpStatus.OK);
 	}
 	@RequestMapping(value="bwlistpage", method=RequestMethod.POST)

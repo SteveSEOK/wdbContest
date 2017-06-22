@@ -40,10 +40,10 @@ private static final String namespace="yjc.wdb.bwMapper";
 	}
 
 	@Override
-	public int bwread(String bwi_content) {
+	public int bwread(IDEA idea) {
 		// TODO Auto-generated method stub
 		//System.out.println(idea_cont);
-		return sqlSession.selectOne(namespace+".bwread", bwi_content );
+		return sqlSession.selectOne(namespace+".bwread", idea );
 		
 	}
 	@Override

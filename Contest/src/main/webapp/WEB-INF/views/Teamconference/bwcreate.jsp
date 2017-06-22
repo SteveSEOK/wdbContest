@@ -10,6 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%@include file="./bwnav.jsp"%>
 <div class="container">
   <h2>주제선정</h2>

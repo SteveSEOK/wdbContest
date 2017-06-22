@@ -13,9 +13,9 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%@include file="./bwnav.jsp"%>
 <%@include file="./chat.jsp"%>
-
 <h3 style="font-family:'Comic Sans MS'; padding-left:25%">Project</h3>
 <table class="table" style="width:70%;margin:auto; margin-top:50px; text-align:left;">
       <tr>

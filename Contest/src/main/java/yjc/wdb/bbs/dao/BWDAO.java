@@ -11,7 +11,7 @@ public interface BWDAO {
 	public int bwpage(int bw_id) throws Exception;
 	public void idea(IDEA io) throws Exception;
 	public void ideaModify(IDEA io) throws Exception;
-	public int bwread(String bwi_content)throws Exception;
+	public int bwread(IDEA idea)throws Exception;
 	public List<IDEA> bwlistpage(String bwp_id) throws Exception;
 	public int listpageid(Page page)throws Exception;
 	public int count(int bw_id) throws Exception;
