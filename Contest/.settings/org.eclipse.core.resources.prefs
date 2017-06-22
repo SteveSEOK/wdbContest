@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/main/java/yjc/wdb/bbs/BBSController.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/BBSReplyController.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/Criteria.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/Criteria2.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/EvaluationController.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/bean/TeamVo.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/dao/TeamDao.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/dao/TeamImpl.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/service/TeamService.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/service/TeamServiceImpl.java=UTF-8
+encoding//src/main/java/yjc/wdb/bbs/util/UploadFileUtils.java=UTF-8
